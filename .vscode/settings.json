@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "pico.h": "c",
+        "config.h": "c",
+        "config_autogen.h": "c",
+        "stdio.h": "c",
+        "adc.h": "c",
+        "gpio.h": "c",
+        "spi.h": "c",
+        "uart.h": "c"
+    }
+}
