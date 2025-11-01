@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
-include(pico_sdk_import.cmake)
+include(pico_sdk_import.cmake) # requires PICO_SDK_PATH to be set in bash (export PICO_SDK_PATH=/path)
 
 project(driver_suite_project C CXX ASM)
 
