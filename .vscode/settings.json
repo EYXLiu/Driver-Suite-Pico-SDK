@@ -8,6 +8,9 @@
         "adc.h": "c",
         "gpio.h": "c",
         "spi.h": "c",
-        "uart.h": "c"
+        "uart.h": "c",
+        "pwm.h": "c",
+        "resets.h": "c",
+        "watchdog.h": "c"
     }
 }
