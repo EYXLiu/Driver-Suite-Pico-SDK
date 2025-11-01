@@ -6,7 +6,6 @@ project(driver_suite_project C CXX ASM)
 pico_sdk_init()
 
 add_executable(driver_suite
-    src/main.c
     src/gpio.c
     src/uart.c
     src/spi.c
