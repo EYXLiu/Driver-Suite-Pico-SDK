@@ -8,7 +8,7 @@ int main() {
     stdio_init_all(); 
     gpio_config(LED_PIN, GPIO_OUTPUT);
 
-    while (1) {
+    while (true) {
         gpio_write(LED_PIN, 1);
         sleep_ms(500);
         gpio_write(LED_PIN, 0);

@@ -1,0 +1,24 @@
+{
+    "version": 1,
+    "author": "Evan Liu",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "wokwi-pi-pico",
+        "id": "pico",
+        "top": 0,
+        "left": 0,
+        "attrs": { "builder": "pico-sdk" }
+      },
+      { "type": "wokwi-ds1307", "id": "rtc1", "top": -130.2, "left": 86.5, "attrs": {} }
+    ],
+    "connections": [
+      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+      [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+      [ "rtc1:GND", "pico:GND.8", "black", [ "h0" ] ],
+      [ "rtc1:5V", "pico:3V3", "red", [ "h0" ] ],
+      [ "rtc1:SDA", "pico:GP4", "green", [ "h0" ] ],
+      [ "rtc1:SCL", "pico:GP5", "green", [ "h0" ] ]
+    ],
+    "dependencies": {}
+  }
