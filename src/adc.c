@@ -40,7 +40,7 @@ float adc_read_temp(void) {
     adc_select_input(4);
     uint16_t raw = adc_read();
     float v = raw * 3.3f / 4095.0f;
-    return 27.0f - (v - 0x706f) / 0.001721f;
+    return 27.0f - (v - 0.706f) / 0.001721f;
 }
 
 float adc_read_vref(void) {

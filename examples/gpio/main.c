@@ -6,7 +6,7 @@
 
 int main() {
     stdio_init_all(); 
-    gpio_config(LED_PIN, GPIO_OUTPUT);
+    gpio_config(LED_PIN, GPIO_OUT);
 
     while (true) {
         gpio_write(LED_PIN, 1);
