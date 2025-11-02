@@ -13,8 +13,8 @@ A modular, hardware-abstraction driver suite for microcontrollers, designed arou
 - System (System clocks, peripherals, watchdog)
 
 # Design highlights
-Modular architecture (similar to Pico SDK) <br/>
-User-space API <br/>
+Modular architecture (similar to pico-sdk) <br/>
+User-space APIs (high level abstraction) <br/>
 Simulator tested (using Wokwi and PlatformIO -> `diagram.json` and `main.c` can be found in `/examples`) <br/>
 CMake Build (Easy to build and integrate accross other microcontroller systems) <br/>
 
