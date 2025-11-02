@@ -1,5 +1,6 @@
 # Driver Suite for Raspberry Pi Pico
-A modular, hardware-abstraction driver suite for microcontrollers, designed around the Raspberry Pi Pico SDK. Developed in C with CMake. 
+A modular, hardware-abstraction driver suite for microcontrollers, designed around the Raspberry Pi Pico SDK. Developed in C with CMake. <br/>
+Bare-metal implementation avaliable [here](https://github.com/EYXLiu/Driver-Suite-Bare-Metal)
 
 # Features
 - GPIO (input and output pins; read inputs (buttons, sensors) and write outputs (LEDs, relays))
