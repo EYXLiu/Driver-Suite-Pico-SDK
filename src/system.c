@@ -4,7 +4,7 @@
 #include "hardware/watchdog.h"
 
 void system_config(void) {
-    set_sys_clock_khz(12500, true); //125mhz
+    set_sys_clock_khz(125000, true); //125mhz
 }
 
 void system_enable_peripheral(uint peripheral_id, bool enable) {
@@ -19,7 +19,7 @@ void system_reset_peripheral(uint peripheral_id) {
 
 void system_set_cpu_freq(uint freq_hz) {
     if (freq_hz == 250000000) set_sys_clock_pll(250, 1);
-    else set_sys_clock_khz(12500, true);
+    else set_sys_clock_khz(125000, true);
 }
 
 void system_enable_watchdog(uint timeout_ms) {

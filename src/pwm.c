@@ -2,7 +2,7 @@
 #include "hardware/pwm.h"
 #include "hardware/clocks.h"
 
-void pwm_config(uint pin, uint freq_hz) {
+void pwm_config_init(uint pin, uint freq_hz) {
     gpio_set_function(pin, GPIO_FUNC_PWM);
     uint slice_num = pwm_gpio_to_slice_num(pin);
     
@@ -30,12 +30,12 @@ uint16_t pwm_get_chan_level_pin(uint pin) {
     uint channel = pwm_gpio_to_channel(pin);
 
     uint32_t cc = pwm_hw->slice[slice_num].cc;
-    return chan == PWM_CHAN_B ? (cc >> PWM_CH0_CC_B_LSB) & 0xFFFF : (cc & 0xFFFF);
+    return channel == PWM_CHAN_B ? (cc >> PWM_CH0_CC_B_LSB) & 0xFFFF : (cc & 0xFFFF);
 }
 
 uint16_t pwm_get_chan_level(uint slice_num, uint channel) {
     uint32_t cc = pwm_hw->slice[slice_num].cc;
-    return chan == PWM_CHAN_B ? (cc >> PWM_CH0_CC_B_LSB) & 0xFFFF : (cc & 0xFFFF);
+    return channel == PWM_CHAN_B ? (cc >> PWM_CH0_CC_B_LSB) & 0xFFFF : (cc & 0xFFFF);
 }
 
 float pwm_get_clkdiv_pin(uint pin) {
@@ -60,7 +60,7 @@ void pwm_set_duty(uint pin, float duty_percent) {
     pwm_set_chan_level(slice_num, channel, level);
 }
 
-void pwm_get_duty(uint pin) {
+float pwm_get_duty(uint pin) {
     uint slice_num = pwm_gpio_to_slice_num(pin);
     uint channel = pwm_gpio_to_channel(pin);
 

@@ -3,7 +3,7 @@
 
 #include "pico/stdlib.h"
 
-void pwm_config(uint pin, uint freq_hz);
+void pwm_config_init(uint pin, uint freq_hz);
 
 uint16_t pwm_get_wrap(uint pin);
 
