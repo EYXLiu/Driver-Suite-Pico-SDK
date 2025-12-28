@@ -12,6 +12,9 @@
         "pwm.h": "c",
         "resets.h": "c",
         "watchdog.h": "c",
-        "sio.h": "c"
+        "sio.h": "c",
+        "platform_defs.h": "c",
+        "address_mapped.h": "c",
+        "addressmap.h": "c"
     }
 }
